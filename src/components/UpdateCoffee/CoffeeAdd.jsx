@@ -35,20 +35,20 @@ const CoffeeAdd = () => {
         })
     }
     return (
-        <div className="  bg-[#649e94] p-8 ">
+        <div className="  bg-[#649e94] p-8 rounded-lg ">
             <h2 className="text-2xl uppercase text-white font-bold "> Add Coffee</h2>
             <form onSubmit={handleAdd} >
       {/* form name and brand name row */}
       <div className="md:flex gap-3  ">
-        <div className="form-control w-1/2">
+        <div className="form-control w-full lg:w-1/2">
           <label className="label">
             <span className="label-text">Coffee Name</span>
           </label>
           <label className="input-group">
-            <input type="text" name="coffee" placeholder="Coffee Name" required  className="input input-bordered w-full bg-black text-white" />
+            <input type="text" name="coffee" placeholder="Coffee Name"  className="input input-bordered w-full bg-black text-white" />
           </label>
         </div>
-        <div className="form-control w-1/2">
+        <div className="form-control w-full lg:w-1/2">
           <label className="label">
             <span className="label-text">Available Quantity</span>
           </label>
@@ -59,7 +59,7 @@ const CoffeeAdd = () => {
       </div>
       {/* form supplier row */}
       <div className="md:flex gap-3 ">
-        <div className="form-control w-1/2">
+        <div className="form-control w-full lg:w-1/2">
           <label className="label">
             <span className="label-text">Supplier Name</span>
           </label>
@@ -67,7 +67,7 @@ const CoffeeAdd = () => {
             <input type="text" name="supplier" placeholder="Supplier Name"   className="input bg-black text-white input-bordered w-full" />
           </label>
         </div>
-        <div className="form-control w-1/2">
+        <div className="form-control w-full lg:w-1/2">
           <label className="label">
             <span className="label-text">Taste</span>
           </label>
@@ -78,7 +78,7 @@ const CoffeeAdd = () => {
       </div>
       {/* form category and details row */}
       <div className="md:flex gap-3 ">
-        <div className="form-control w-1/2">
+        <div className="form-control w-full lg:w-1/2">
           <label className="label">
             <span className="label-text">Category</span>
           </label>
@@ -86,7 +86,7 @@ const CoffeeAdd = () => {
             <input type="text" name="category" placeholder="Category"  className="input bg-black text-white input-bordered w-full" />
           </label>
         </div>
-        <div className="form-control w-1/2">
+        <div className="form-control w-full lg:w-1/2">
           <label className="label">
             <span className="label-text">Details</span>
           </label>
