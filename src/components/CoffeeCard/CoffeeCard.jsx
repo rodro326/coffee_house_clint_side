@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const CoffeeCard = ({element}) => {
+const CoffeeCard = ({element,remaining,setRemaining}) => {
     const {coffee,quantity,category, supplier,taste, details,photo,_id} = element;
 
     const handleDelete = id =>{
       console.log(id)
       Swal.fire({
         title: "Are you sure?",
-        text: "You won't be able to revert this!",
+        text: "You want to delete this item",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
@@ -32,6 +32,8 @@ const CoffeeCard = ({element}) => {
                 text: "Your file has been deleted.",
                 icon: "success"
               });
+              const rem = remaining.filter(cof=> cof._id !== _id);
+              setRemaining(rem)
             }
           })
         }
@@ -50,7 +52,7 @@ const CoffeeCard = ({element}) => {
           <p>{category}</p>
          </div>
           <div className="flex flex-col gap-1">
-            <button className="btn btn-info">View</button>
+            <Link to={`/details/${_id}`}><button className="btn w-[100px] btn-info">View</button></Link>
             <Link to={`/updatecoffee/${_id}`}>
             <button className="btn btn-success w-[100px] ">Edit</button> 
             </Link>

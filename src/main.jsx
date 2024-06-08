@@ -10,6 +10,7 @@ import CoffeeAdd from './components/UpdateCoffee/CoffeeAdd';
 import UpdateCoffee from './components/UpdateCoffee/UpdateCoffee';
 import Home from './components/Home/Home';
 import Blog from './components/Blog/Blog';
+import CardDetails from './components/CardDetails/CardDetails';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/home',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch('http://localhost:3000/coffee')
       },
       {
         path:'/addcoffee',
@@ -30,13 +32,13 @@ const router = createBrowserRouter([
         loader: ({params}) =>fetch(`http://localhost:3000/coffee/${params.id}`)
       },
       {
-        path:'/home',
-        element:<Home></Home>,
-        loader:()=>fetch('http://localhost:3000/coffee')
-      },
-      {
         path:'/blog',
         element:<Blog></Blog>
+      },
+      {
+        path:'/details/:id',
+        element:<CardDetails></CardDetails>,
+        loader:({params})  =>fetch(`http://localhost:3000/coffee/${params.id}`)
       }
     ]
   },
