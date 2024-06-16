@@ -1,11 +1,16 @@
+import { useEffect, useState } from "react";
 import {  NavLink } from "react-router-dom";
 
 const NavBar = () => {
+
     const links = <>
   <li><NavLink to="/home">Home</NavLink></li>
   <li><NavLink to="/addcoffee">Add Coffee</NavLink></li>
-  <li><NavLink to='/blog'>Blog</NavLink></li>
+  <li><NavLink to='/sign'>SingUp</NavLink></li>
+  <li><NavLink to='/login'>LogIn</NavLink></li>
+  <li><NavLink to='/user'>Users</NavLink></li>
   </>
+  
     return (
         <div className="navbar ">
   <div className="navbar-start">

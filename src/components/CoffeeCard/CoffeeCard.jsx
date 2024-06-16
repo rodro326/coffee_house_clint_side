@@ -40,7 +40,7 @@ const CoffeeCard = ({element,remaining,setRemaining}) => {
       });
     }
     return (
-        <div className="card  card-side shadow-xl">
+        <div className="card  card-side shadow-xl mt-6">
         <figure><img className="h-[230px] w-[200px]" src={photo} alt="Movie"/></figure>
         <div className="card-body flex flex-row" >
          <div className="flex-1 space-y-1">

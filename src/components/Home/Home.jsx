@@ -2,6 +2,7 @@ import { useState } from "react";
 import CoffeeCard from "../CoffeeCard/CoffeeCard";
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
+import Footer from "../Footer/Footer";
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
                 ></CoffeeCard>)
             }
             </div>
+            <Footer></Footer>
         </div>
     );
 };
